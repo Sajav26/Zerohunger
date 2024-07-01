@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Team.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Team</title>
+</head>
+<body>
+    <!-- Header with Logo and Navigation -->
+    <header>
+        <div class="logo">
+            <img src="zh2.png" alt="Website Logo">
+        </div>
+        <div class="website-name">
+            <h1>Zero Hunger</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html" class="active">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <div class="team_container">
+            <div class="team_article">
+                <img src="img1.png" alt="Sajanthan">
+
+                <div class="team_data">
+                    <p class="name"> Sajanthan </p>
+                    <p class="name">CS Student L4</p>
+                    <p class="role">Role : Student 1</p>
+                    <p class="role">UoW  : w2053757</p>
+                </div>
+            </div>
+
+            <div class="team_article">
+                <img src="img2.png" alt="Muharram">
+
+                <div class="team_data">
+                    <p class="name"> Muharram </p>
+                    <p class="name">CS Student L4</p>
+                    <p class="role">Role : Student 2</p>
+                    <p class="role">UoW  : w2053210</p>
+                </div>
+            </div>
+
+            <div class="team_article">
+                <img src="img3.png" alt="Shangari">
+
+                <div class="team_data">
+                    <p class="name"> Shangari </p>
+                    <p class="name">CS Student L4</p>
+                    <p class="role">Role : Student 3</p>
+                    <p class="role">UoW  : w2055152</p>
+                </div>
+            </div>
+
+            <div class="team_article">
+                <img src="img4.png" alt="Shahinya">
+
+                <div class="team_data">
+                    <p class="name"> Shahinya </p>
+                    <p class="name">CS Student L4</p>
+                    <p class="role">Role : Student 4</p>
+                    <p class="role">UoW  : w2053203</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Footer -->
+<footer id="myFooter" style="display: block;">
+    <p>&copy; 2024 Zero Hunger. All rights reserved.</p>
+    <a href="Shangari.html">Page Editor</a>
+</footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var footer = document.getElementById('myFooter');
+        var scrollPosition = window.scrollY;
+        var windowHeight = window.innerHeight;
+        var documentHeight = Math.max(
+            document.documentElement.scrollHeight, 
+            document.body.scrollHeight,
+            document.documentElement.clientHeight
+        );
+
+        var distanceToBottom = documentHeight - (scrollPosition + windowHeight);
+
+        var threshold = 100;
+
+        if (distanceToBottom <= threshold) {
+            footer.style.display = 'block'; 
+        } else {
+            footer.style.display = 'none'; 
+        }
+    });
+    // Wait for the page to be fully loaded before executing the code
+    window.addEventListener('load', function() {
+    // Scroll a bit to trigger the scroll event and hide the footer initially
+    window.scrollBy(0, 1);
+    });
+</script>
+
+</body>
+</html>

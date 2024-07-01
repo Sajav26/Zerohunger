@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Content page.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Content page</title>
+</head>
+<body>
+    <!-- Header with Logo and Navigation -->
+    <header>
+        <div class="logo">
+            <img src="zh2.png" alt="Website Logo">
+        </div>
+        <div class="website-name">
+            <h1>Zero Hunger</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<h2>"Impact Of Hunger On Society"</h2>
+<div class="container">
+    <p>
+        Hunger has a significant and diverse impact on society, affecting people on all different levels as individuals and as communities. 
+        Not only does hunger deny people their fundamental human right to enough food, but it also makes it more difficult for them to live healthy, fulfilling lives. 
+        Children who experience chronic hunger and malnutrition may grow more slowly, which could hinder their ability to study and jeopardize their physical and mental development. 
+        It lowers adult productivity at work, which feeds the cycle of poverty and economic stagnation. 
+        Social inequality is made worse by hunger since the most disadvantaged groups are frequently the ones that suffer the most. 
+        Furthermore, because individuals are compelled to flee their homes in quest of food and better living conditions, it encourages social unrest and migration.
+        Addressing hunger is not just a moral imperative but a critical step towards building more equitable, peaceful, and prosperous societies. 
+    </p>
+</div>
+
+<li><a style="color: blue;" href="#health">Health</a></li><br>
+<li><a style="color: blue;" href="#education">Education</a></li><br>
+<li><a style="color: blue;" href="#economicproductivity">Economic Productivity</a></li><br>
+<li><a style="color: blue;" href="#socialstability">Social Stability</a></li><br>
+<li><a style="color: blue;" href="#cycleofpoverty">Cycle of Poverty</a></li>
+
+<h4>Health</h4>
+<section id="health">
+    <p>
+        Hunger and malnutrition lead to poor health outcomes, including stunted growth in children, compromised immune systems, and increased susceptibility to diseases. 
+        Malnourished children often suffer from developmental delays, affecting their health far into adulthood. 
+    </p>
+</section>
+
+<h4>Education</h4>
+<section id="education">
+    <p>
+        Hunger can severely impair cognitive development and concentration, making it difficult for children to learn and perform well in school. 
+        This educational impact can limit future opportunities and perpetuate cycles of poverty.
+    </p>
+</section>
+
+<h4>Economic Productivity</h4>
+<section id="economicproductivity">
+    <p>
+        Malnutrition and hunger-related health problems can significantly reduce an individual's ability to work and be productive, impacting economic productivity at both the individual and national levels.
+        This can lead to increased healthcare costs and reduced economic growth.
+    </p>
+</section>
+
+<h4>Social Stability</h4>
+<section id="socialstability">
+    <p>
+        Chronic hunger can increase inequities, causing social unrest and instability.
+        When large sectors of the population face food insecurity, it can lead to higher crime rates, violence, and migration.
+    </p>
+</section>
+
+<h4>Cycle of Poverty</h4>
+<section id="cycleofpoverty">
+    <p>
+        Hunger is both the cause and the result of poverty. 
+        Poor families may be unable to buy adequate foods, resulting in hunger and malnutrition. 
+        As a result, individuals may be unable to obtain the education and work possibilities necessary to lift themselves out of poverty.
+    </p>
+</section>
+
+
+<!-- Footer -->
+<footer id="myFooter" style="display: none;">
+    <p>&copy; 2024 Zero Hunger. All rights reserved.</p>
+    <a href="Shangari.html">Page Editor</a>
+</footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var footer = document.getElementById('myFooter');
+        var scrollPosition = window.scrollY;
+        var windowHeight = window.innerHeight;
+        var documentHeight = Math.max(
+            document.documentElement.scrollHeight, 
+            document.body.scrollHeight,
+            document.documentElement.clientHeight
+        );
+
+        var distanceToBottom = documentHeight - (scrollPosition + windowHeight);
+
+        var threshold = 100;
+
+        if (distanceToBottom <= threshold) {
+            footer.style.display = 'block'; 
+        } else {
+            footer.style.display = 'none'; 
+        }
+    });
+    // Wait for the page to be fully loaded before executing the code
+    window.addEventListener('load', function() {
+    // Scroll a bit to trigger the scroll event and hide the footer initially
+    window.scrollBy(0, 1);
+    });
+</script>
+
+</body>
+</html>

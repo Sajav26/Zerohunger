@@ -1,0 +1,79 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),url(https://commons.wikimedia.org/wiki/File:A_black_background.jpg);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: orange;  
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color:black;
+}
+
+p {
+    color: white;
+    line-height: 1.6;
+}
+
+footer { 
+    background-color: orange;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-image {
+    display: block;
+    margin: 0 auto;
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+}
+
+h2 {
+    text-align: left;
+    color: orange;
+}
+
+ul {
+    padding-left: 20px;
+    color: white;
+}
+
+li {
+    line-height: 1.6;
+}
+
+.email-link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email-link-iit {
+    color: cornflowerblue;
+   
+}
+
+.email-link-westminster {
+    color:cornflowerblue;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}

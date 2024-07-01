@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Content Page</title>
+        <link rel="stylesheet" type="text/css" href="Contentpage.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="zh2.png" alt="Website Logo">
+            </div>
+            <div class="website-name">
+                <h1>Zero Hunger</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="profile.html">User Profile</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h2>Sustainable solutions to end hunger</h2>
+        <div class="container">
+            <p>Sustainable solutions to the hunger crisis should address both the root causes of food insecurity and the immediate availability of food. Agricultural operations should adopt sustainable techniques to improve soil fertility, preserve water, and reduce environmental damage. Advocating for agroecological practices like organic agriculture, ecological design, and agroforestry can enhance yields while preserving diversity and building resilience to climate change. Community investment in agricultural infrastructure, such as storage facilities and irrigation systems, can boost food security and reduce reliance on imports. Funding research and innovation, such as creating agricultural types resistant to climate change, enhancing post-harvest technology, and promoting environmentally friendly food distribution and processing practices, can also help eradicate hunger sustainably. Promoting international commitment and collaboration, including aid for development, funding sustainable agriculture in low-income nations, and addressing food waste and inefficient distribution, can help achieve global food security. A comprehensive strategy incorporating environmental, social, and economic components can successfully reduce hunger and provide food security for future generations. </p>
+        </div>
+        <ol>
+            <li><a style="color: blue;" href="#farming">Sustainable Farming</a></li>
+            <li><a style="color: blue;" href="#foodwaste">Food waste reduction</a></li>
+            <li><a style="color: blue;" href="#foodaccess">Food distribution and access</a></li>
+        </ol>
+
+        <h3>Sustainable farming</h3>
+        <section id="farming">
+            <p>An approach to farming called sustainable farming, or sustainable agriculture, strives to produce food in a way that is socially and environmentally responsible as well as economically feasible for both the present and future generations. Regenerative, resilient, and egalitarian agricultural techniques are promoted by sustainable farming, which aims to strike a balance between the demands of present and future generations, the environment, and humankind.</p>
+        </section>
+
+        <h3>Food waste reduction</h3>
+        <section id="foodwaste">
+            <p>Reducing food waste has become essential in today's society, when environmental sustainability and food scarcity are major concerns. The throwing away of edibles at different points in the food supply chain, from manufacturing to consumption, is referred to as food waste. This waste adds to greenhouse gas emissions and environmental deterioration in addition to wasting important resources like energy, land, and water.</p>
+        </section>
+
+        <h3>Food distribution and access</h3>
+        <section id="foodaccess">
+            <p>Food security and global hunger are crucial, but many people face challenges like poverty, remote locations, and poor infrastructure. Governments, organizations, corporations, and communities must collaborate to improve transportation networks, enact fair food regulations, support sustainable agriculture, and strengthen social safety nets. By collaborating, we can achieve food security and expand access to wholesome food, ensuring everyone has access to wholesome food.</p>
+        </section>
+
+
+        <footer id="myFooter">
+            <p>&copy; 2024 Zero Hunger. All rights reserved.</p>
+            <a href="Shahinya.html">Page Editor</a>
+        </footer>
+        <script>
+            window.addEventListener('scroll', function() {
+            var footer = document.getElementById('myFooter');
+            var scrollPosition = window.scrollY;
+            var windowHeight = window.innerHeight;
+            var documentHeight = Math.max(
+                document.documentElement.scrollHeight, 
+                document.body.scrollHeight,
+                document.documentElement.clientHeight
+            );
+        
+            var distanceToBottom = documentHeight - (scrollPosition + windowHeight);
+        
+            var threshold = 100;
+        
+            if (distanceToBottom <= threshold) {
+                footer.style.display = 'block'; 
+            } else {
+                footer.style.display = 'none'; 
+            }
+        });
+        
+        // Wait for the page to be fully loaded before executing the code
+        window.addEventListener('load', function() {
+            // Scroll a bit to trigger the scroll event and hide the footer initially
+            window.scrollBy(0, 1);
+        });
+        </script>
+        
+    </body>
+</html>

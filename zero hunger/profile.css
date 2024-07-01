@@ -1,0 +1,65 @@
+/* Add your CSS styles here */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(Img6.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  background-attachment: fixed;
+  text-align: center;
+}
+  
+h1 {
+  text-align:center;
+}
+ 
+h2 {
+  text-align:center;
+}
+
+h3 {
+  margin: 3rem 30rem ;
+  text-align:justify;
+}
+
+button {
+  width: 10%;
+  height: 30px;
+  text-align:center;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+#personal-details,
+#volunteering-experience,
+#qualification,
+#availability {
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CSS styles for the progress bar */
+.progress {
+  width: 50%;
+  background-color: #ddd;
+  border-radius: 30px;
+  text-align: center;
+  margin: auto;
+}
+
+#progress-bar {
+  height: 20px;
+  background-color: #4caf50;
+  width: 0%; /* Initial width is 0 */
+}
+
+#progress-text {
+  text-align: center;
+  padding: 5px 0;
+}
+
+#cent{
+    text-align: center;
+}

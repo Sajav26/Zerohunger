@@ -1,0 +1,149 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0%;
+    padding-bottom: 50px;
+}
+
+.editor-details{
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img{
+    float: left;
+    display: block;
+    width: 250px;
+    height: 300px;
+    border-radius: 15px;
+    padding-bottom: 0px;
+    margin-top: 0rem;
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    margin-inline: 25px;
+    padding-block: 100px;
+}
+
+.team_container{
+    display: inline-flex;
+    row-gap: 60px;
+}
+
+.team_article{
+    position: relative;
+    overflow: hidden;
+    margin: 20px; 
+}
+
+.team_img{
+    width: 300px;
+    border-radius: 25px;
+}
+
+.team_data{
+    position: absolute;
+    bottom: -10rem;
+    left: auto;
+    width: 100%;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.1s;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    right: 0;
+    margin-inline: auto;
+    opacity: 0;
+    transition: opacity 1s 1s;   
+}    
+
+.team_description{
+    display: block;
+    font-size: small;
+    margin-bottom: 5px;
+}
+
+.team_title {
+    font-size: larger;
+    color: black;
+    margin-bottom: .75rem;
+    margin-left: 2px;
+}
+
+.team_article:hover .team_data {
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.team_article:hover {
+    cursor: cell;
+    transform: scale(1.2);
+    animation: remove-overflow 2s forwards;
+}
+
+.name{
+    text-align: center;
+}
+
+.role{
+    text-align: center;
+}
+
+.editor-details{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    background: dimgrey;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    text-align: center;
+}
+
+.editor-details button{
+    font-size: 12px;
+    font-weight: 500;
+    background: cornflowerblue;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.editor-details button:hover{
+    background: cornflowerblue;
+    color: white;
+}
+
+@keyframes show-data {
+    50%{
+        transform: translateY(-10rem);
+    }
+    100%{
+        transform: translateY(-7rem);
+    }
+}
+
+@keyframes remove-overflow {
+    to {
+      overflow: initial;
+    }
+}
+   

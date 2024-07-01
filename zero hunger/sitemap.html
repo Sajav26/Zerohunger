@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sitemap</title>
+    <link rel="stylesheet" type="text/css" href="sitemap.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body class="bg">
+<header>
+    <div class="logo">
+        <img src="zh2.png" alt="Website Logo">
+    </div>
+    <div class="website-name">
+        <h1>Zero Hunger</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="profile.html">User Profile</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a class="active" href="sitemap.html">Sitemap</a></li>
+            <li><a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="heading">
+    <p class="headText"><b> SITE MAP </b></p>
+    <br><br>
+</div>
+
+<div class="svg">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="300">
+
+        <a href="home.html">
+            <circle cx="700" cy="50" r="40" fill="#155b6b" class="a" class="circle"/>
+            <text x="700" y="50" text-anchor="middle" class="text" class="a">Home</text>
+        </a>
+
+        <a href="sitemap.html">
+            <circle cx="100" cy="250" r="40" fill="#155b6b" class="a" class="circle"/>
+            <text x="100" y="250" text-anchor="middle" class="text" class="a">Current</text>
+            <text x="100" y="265" text-anchor="middle" class="text" class="a">Page</text>
+        </a>
+
+        <a href="profile.html">
+            <circle cx="300" cy="250" r="40" fill="#155b6b" class="a" class="circle"/>
+            <text x="300" y="250" text-anchor="middle" class="text" class="a">User</text>
+            <text x="300" y="265" text-anchor="middle" class="text" class="a">Profile</text>
+        </a>
+
+        <a href="feedback.html">
+            <circle cx="500" cy="250" r="40" fill="#155b6b" class="a" class="circle"/>
+            <text x="500" y="250" text-anchor="middle" class="text" class="a">Feed</text>
+            <text x="500" y="265" text-anchor="middle" class="text" class="a">back</text>
+        </a>
+
+        <a href="shop.html">
+            <circle cx="700" cy="250" r="40" fill="#155b6b" class="a" class="circle"/>
+            <text x="700" y="255" text-anchor="middle" class="text" class="a">Shop</text>
+        </a>
+
+        <a href="team.html">
+            <circle cx="900" cy="250" r="40" fill="#155b6b" class="a" class="circle"/>
+            <text x="900" y="250" text-anchor="middle" class="text" class="a">Student</text>
+            <text x="900" y="265" text-anchor="middle" class="text" class="a">Details</text>
+        </a>
+
+        <a href="gallery.html">
+            <circle cx="1100" cy="250" r="40" fill="#155b6b" class="a" class="circle"/>
+            <text x="1100" y="255" text-anchor="middle" class="text" class="a">Gallery</text>
+        </a>
+
+
+        <!-- Connecting links -->
+        <line x1="700" y1="90" x2="700" y2="130" class="link"/>
+        <line x1="98" y1="130" x2="1102" y2="130" class="link"/>
+        <line x1="100" y1="130" x2="100" y2="210" class="link"/>
+        <line x1="300" y1="130" x2="300" y2="210" class="link"/>
+        <line x1="500" y1="130" x2="500" y2="210" class="link"/>
+        <line x1="700" y1="130" x2="700" y2="210" class="link"/>
+        <line x1="900" y1="130" x2="900" y2="210" class="link"/>
+        <line x1="1100" y1="130" x2="1100" y2="210" class="link"/>
+
+    </svg>
+</div>
+
+<footer id="myFooter" style="display: none;">
+    <p>&copy; 2024 Zero Hunger. All rights reserved.</p>
+    <a href="Shahinya.html">Page Editor</a>
+</footer>
+<script>
+    window.addEventListener('scroll', function() {
+    var footer = document.getElementById('myFooter');
+    var scrollPosition = window.scrollY;
+    var windowHeight = window.innerHeight;
+    var documentHeight = Math.max(
+        document.documentElement.scrollHeight, 
+        document.body.scrollHeight,
+        document.documentElement.clientHeight
+    );
+
+    var distanceToBottom = documentHeight - (scrollPosition + windowHeight);
+
+    var threshold = 100;
+
+    if (distanceToBottom <= threshold) {
+        footer.style.display = 'block'; 
+    } else {
+        footer.style.display = 'none'; 
+    }
+});
+
+// Wait for the page to be fully loaded before executing the code
+window.addEventListener('load', function() {
+    // Scroll a bit to trigger the scroll event and hide the footer initially
+    window.scrollBy(0, 1);
+});
+</script>
+
+<script src="gallery.js"></script>
+
+</body>
+</html>

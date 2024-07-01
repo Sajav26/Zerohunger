@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Editor's Page</title>
+    <link rel="stylesheet" href="Shangari.css">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Editor's Page</h1>
+    </header>
+    
+    <main>
+        <img class="profile-image" src="img3.png" alt="Editor's Profile Image">
+        
+        <h2>About Me</h2>
+        <p>
+            Hello, my name is Shangari Ganesharajah.<br>
+            I am the editor who worked on these following pages and brought these pages to life,<br> helping them flourish and thrive. <br><br>
+            Role : Student 3<br>
+            IIT ID : 20231001<br>
+            UoW ID : w2055152
+          
+
+        </p>
+        
+        <h2>My Work</h2>
+        <ul>
+            <li>
+                <p>Created user profile questions related to the theme. </p>
+                <a style="color: cornflowerblue;" href="profile.html">Link to User Profile page</a>
+            </li>
+            <li>
+                <p>Created "About us" page with the images of team members.</p>
+                <a style="color: cornflowerblue;" href="Team.html">Link to Team Page</a>
+            </li>
+            <li>
+                <p>Provided necessary CSS and JavaScript to the website.</p>
+            </li>
+            <li>
+                <p>Created a content page relevant to the topic</p>
+                <a style="color: cornflowerblue;" href="Content page3.html">Link to content page</a>
+            </li>
+        </ul>
+       
+        <h2>Contact Me</h2>
+        <p>
+            If you have any questions or would like to discuss about our project, please feel free to reach out to me. 
+        </p>
+        <p>
+            IIT - Email: <a href="mailto:shangari.20231001@iit.ac.lk" class="email-link email-link-iit">shangari.20231001@iit.ac.lk</a><br>
+            Westminster - Email: <a href="mailto:w2055152@westminster.ac.uk" class="email-link email-link-westminster">w2055152@westminster.ac.uk</a>
+        </p>
+    </main>
+    
+    <!-- Footer -->
+<footer id="myFooter" style="display: none;">
+    <p>&copy; 2024 Zero Hunger. All rights reserved.</p>
+    <a href="Shangari.html">Page Editor</a>
+</footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var footer = document.getElementById('myFooter');
+        var scrollPosition = window.scrollY;
+        var windowHeight = window.innerHeight;
+        var documentHeight = Math.max(
+            document.documentElement.scrollHeight, 
+            document.body.scrollHeight,
+            document.documentElement.clientHeight
+        );
+
+        var distanceToBottom = documentHeight - (scrollPosition + windowHeight);
+
+        var threshold = 100;
+
+        if (distanceToBottom <= threshold) {
+            footer.style.display = 'block'; 
+        } else {
+            footer.style.display = 'none'; 
+        }
+    });
+    // Wait for the page to be fully loaded before executing the code
+    window.addEventListener('load', function() {
+    // Scroll a bit to trigger the scroll event and hide the footer initially
+    window.scrollBy(0, 1);
+    });
+</script>
+
+</body>
+</html>

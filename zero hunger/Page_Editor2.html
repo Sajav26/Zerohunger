@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 255, 1.0);
+            text-align: center;
+        }
+
+        h1 {
+            color: cyan;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        a {
+            color: cyan;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .first-task {
+            border-top: 2px solid cyan;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid cyan;
+        }
+
+        .first-task h3 {
+            color: cyan;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .first-task p {
+            margin-bottom: 20px;
+        }
+
+        .task {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid cyan;
+        }
+
+        .task h3 {
+            color: cyan;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        
+        .task p {
+            margin-bottom: 20px;
+        }
+
+        .last-task h3 {
+            color: cyan;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        
+        .last-task p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Page Editor</h1>
+        <img src="img2.png" alt="Profile Picture" class="profile-pic">
+        <p><strong>Name:</strong> J. S. M. Rahmani</p>
+        <p><strong>Role:</strong> Student 2</p>
+        <p><strong>IIT No:</strong> 20222274</p>
+        <p><strong>UoW No:</strong> w2053210</p>
+        
+        <div class="first-task">
+            <h3>Home Page + website template + navigation bar</h3>
+            <p>For Home Page I have included Website Identity (Logo), Website Mission, Navigation Bar and Links to content.</p>
+            <p>The home page prominently features the logo and elaborates on the UN Sustainable Development Goal that the website is aligned with.</p>
+            <p>The Navigation Bar is made so that it facilitates seamless navigation to other sections of the website. The navigation bar was designed using CSS indicating the active page being browsed by the user and featuring a hover effect to highlight available links.</p>
+            <p>I have created an external CSS file that ensures a common look and feel for the website.</p>
+            <p>The home page includes Links to the 4 pages of the website dedicated to content.</p>
+            <p>The navbar is a part of the website header. I have also created an external CSS file that establishes a unified template for the website. This includes a standardized header featuring the website logo.</p>
+            <a href="home.html">home.html</a>
+        </div>
+
+        <div class="task">
+            <h3>Feedback</h3>
+            <p>The feedback form page features a clean and intuitive interface, making it easy for users to navigate and submit their comments.</p>
+            <p>The following elements are included in this: Input fields, Validation, Error handling, Preview, Edit and Confirmation.</p>
+            <p>The form is set up to email the contents of the form to a valid email address through xampp.</p>
+            <p>Validation checks are implemented to ensure that email input is in the correct format eg: x@x, and to ensure that required fields are completed before submitting the form.</p>
+            <p>Clear error messages and indications if users attempt to submit the form with missing or invalid information are implemented. The fields that require attention to assist users in correcting their input are highlighted.</p>
+            <p>Users are allowed to preview the feedback form and edit it before submitting it.</p>
+            <p>Upon successful submission, a confirmation message is displayed to acknowledge receipt of the feedback.</p>
+            <a href="feedback.html">feedback.html</a>
+        </div>
+
+        <div class="task">
+            <h3>Content page</h3>
+            <p>An additional content page related to my website's theme/topic has been created, and it is an Educational Resources page that provides ways to gain more knowledge on Zero Hunger.</p>
+            <p>I have ensured that this page has sufficient length to allow for internal linking within the content.</p>
+            <p>Since my page is slightly longer than the screen size, I have included a navigation links at the top of the page to various sections within the text for easy navigation.</p>
+            <a href="Educational_Resources.html">Educational_Resources.html</a>
+        </div>
+
+        <div class="task">
+            <h3>Page Editor</h3>
+            <p>This is the page you are currently on.</p>
+            <p>This page will features my name, role in the group's work, and a list of completed tasks.</p>
+            <a href="Page_Editor2.html">Page_Editor.html</a>
+        </div>
+
+        <div class="last-task">
+            <h3>Additional JavaScript</h3>
+            <p>Additional JavaScript functionalities have been added to enhance the website's interactivity and improve navigation.</p>
+        </div>
+
+    </div>
+</body>
+</html>

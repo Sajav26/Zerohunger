@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 50px;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 100vh;
+    background: rgb(146, 142, 133);
+
+}
+
+.container h1 {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    padding: 15px;
+    color: black;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.image-container {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.image-container .image {
+    position: relative;
+    height: 300px;
+    width: 400px;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.image-container .image:hover img {
+    transform: scale(1.1);
+}
+
+.image-container .image .description {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-image .popup-content {
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    width: 800px; /* Adjust the width as needed */
+    max-height: 500px; /* Adjust the max height as needed */
+    overflow-y: auto; /* Add scrollbar if content exceeds max height */
+}
+
+.popup-image .popup-content img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.popup-image .description {
+    font-size: 16px;
+    color: #333;
+    text-align:left;
+    margin-bottom: 10px;
+}
+
+.popup-image span {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color:black;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.color-picker {
+    text-align: center;
+}
+
+.color-picker p {
+    display: inline-block;
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.font-style-picker {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.font-style-picker p {
+    display: inline-block;
+}
+
+.font-style-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.font-style-option {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #000;
+    cursor: pointer;
+}

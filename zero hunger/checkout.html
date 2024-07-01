@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Confirmation</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="checkout.css">
+<style>
+    .error-message {
+        color: red;
+        font-size: 14px;
+    }
+    .valid-input {
+        border: 1px solid green;
+    }
+    .invalid-input {
+        border: 1px solid red;
+    }
+</style>
+</head>
+<body>
+    <header>
+    <div class="logo">
+      <img src="zh2.png" alt="Website Logo">
+    </div>
+    <div class="website-name">
+      <h1>Zero Hunger</h1>
+    </div> 
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="profile.html">User Profile</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <form id="orderForm">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title">Billing Address</h3>
+                <div class="inputbox">
+                    <span>Full Name :</span>
+                    <input type="text" id="fullName" placeholder="John Doe">
+                    <div id="fullNameError" class="error-message"></div>
+                </div>
+                <div class="inputbox">
+                    <span>Email :</span>
+                    <input type="text" id="email" placeholder="example@example.com">
+                    <div id="emailError" class="error-message"></div>
+                </div>
+                <div class="inputbox">
+                    <span>Address :</span>
+                    <input type="text" id="address" placeholder="houseno - street name - locality">
+                    <div id="addressError" class="error-message"></div>
+                </div>
+                <div class="inputbox">
+                    <span>City :</span>
+                    <input type="text" id="city" placeholder="Colombo">
+                    <div id="cityError" class="error-message"></div>
+                </div>
+                <div class="flex">
+                    <div class="inputbox">
+                        <span>State :</span>
+                        <input type="text" id="state" placeholder="Sri Lanka">
+                        <div id="stateError" class="error-message"></div>
+                    </div>
+                    <div class="inputbox">
+                        <span>Zip Code :</span>
+                        <input type="text" id="zipCode" placeholder="123 456">
+                        <div id="zipCodeError" class="error-message"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">Payment Details</h3>
+                <div class="inputbox">
+                    <span>Cards that are Accepted :</span>
+                    <img src="card_img.png" alt="">
+                </div>
+                <div class="inputbox">
+                    <span>Card Holder :</span>
+                    <input type="text" id="cardHolder" placeholder="BANK NAME">
+                    <div id="cardHolderError" class="error-message"></div>
+                </div>
+                <div class="inputbox">
+                    <span>Debit or Credit Card Number :</span>
+                    <input type="text" id="cardNumber" placeholder="1111-2222-3333-4444">
+                    <div id="cardNumberError" class="error-message"></div>
+                </div>
+                <div class="inputbox">
+                    <span>Expiry Date :</span>
+                    <input type="text" id="expiryDate" placeholder="MM/YY">
+                    <div id="expiryDateError" class="error-message"></div>
+                </div>
+                <div class="flex">
+                    <div class="inputbox">
+                        <span>CVV :</span>
+                        <input type="text" id="cvv" placeholder="XXX">
+                        <div id="cvvError" class="error-message"></div>
+                    </div>
+                </div>
+
+                <!-- Order Reference and Total Amount -->
+                <div class="order-details">
+                    <div class="inputbox">
+                        <span>Order Reference :</span>
+                        <span id="orderReference"></span>
+                    </div>
+                    <div class="inputbox">
+                        <span>Total Amount :</span>
+                        <span id="totalAmount"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <button class="submit-btn">Place your order</button>
+
+    </form>
+
+  </div>
+
+  <div id="confirmationMessage"></div>
+
+  <footer id="myFooter" style="display: none;">
+        <p>&copy; 2024 Zero Hunger. All rights reserved.</p>
+        <a href="pageeditor1.html">Page Editor</a>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('myFooter');
+            var scrollPosition = window.scrollY;
+            var windowHeight = window.innerHeight;
+            var documentHeight = Math.max(
+                document.documentElement.scrollHeight, 
+                document.body.scrollHeight,
+                document.documentElement.clientHeight
+            );
+
+            var distanceToBottom = documentHeight - (scrollPosition + windowHeight);
+
+            var threshold = 100;
+
+            if (distanceToBottom <= threshold) {
+                footer.style.display = 'block'; 
+            } else {
+                footer.style.display = 'none'; 
+            }
+        });
+
+        // Wait for the page to be fully loaded before executing the code
+        window.addEventListener('load', function() {
+            // Scroll a bit to trigger the scroll event and hide the footer initially
+            window.scrollBy(0, 1);
+        });
+    </script>
+    <script src="checkout.js"></script>
+</body>
+</html>

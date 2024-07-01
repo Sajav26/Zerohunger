@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <style>
+    button {
+      display: block;
+      margin: auto;
+    }
+  </style>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <!-- Header with Logo and Navigation -->
+  <header>
+    <div class="logo">
+        <img src="zh2.png" alt="Website Logo">
+    </div>
+    <div class="website-name">
+        <h1>Zero Hunger</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="profile.html" class="active">User Profile</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+            <li><a href="team.html">Team</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <h1><u>Build User Profile</u></h1><br>
+  <button id="start-button">Start</button><br><br>
+  
+  <div id="personal-details" style="display: none;" >
+    <fieldset style="background-color: rgba(0, 0, 0, 0.1);">
+    <h2>Step1: <u> Personal Details|Question 1/4 </u></h2>
+    <h3 style="text-align: justify,center;">
+    Name: <span id="name"></span><br><br>
+    Surname: <span id="surname"></span><br><br>
+    Age: <span id="age"></span><br><br>
+    Gender: <span id="gender"></span><br><br>
+    Agree with privacy terms: <span id="privacyterms">
+    </h3> 
+    <button onclick="validateAndShowExperienceForm()">Next</button>
+    </fieldset>
+  </div>
+    
+  <div id="volunteering-experience" style="display: none;">
+    <fieldset style="background-color: rgba(0, 0, 0, 0.1);">
+    <h2>Step2: <u> Volunteering Experience|Question 2/4</h2></u>
+    <h3>
+    Rational: <span id="Rational"></span><br><br>
+    DoA: <span id="DoA"></span><br><br>
+    Task: <span id="task"></span><br><br>
+    Place: <span id="Place"></span><br><br>
+    Assignment type: <span id="Assignmenttype"></span>
+    </h3>
+    <button onclick="validateAndShowQualificationForm()">Next</button> 
+    </fieldset>
+  </div>
+
+  <div id="qualification" style="display: none;">
+    <fieldset style="background-color: rgba(0, 0, 0, 0.1);">
+    <h2>Step3: <u> Qualification|Question 3/4</h2></u>
+    <h3>
+    Area of study: <span id="Area_of_study"></span><br><br>
+    Highest degree: <span id="Highest_degree"></span><br><br>
+    University/Institution: <span id="University_Institution"></span><br><br>
+    Completion year: <span id="Completion_year"></span><br><br>
+    Country: <span id="Country"></span>
+    </h3>
+    <button onclick="validateAndShowAvailabilityForm()">Next</button>
+    </fieldset>
+  </div>
+
+  <div id="availability" style="display: none;">
+    <fieldset style="background-color: rgba(0, 0, 0, 0.1);">
+    <h2>Step1: <u> Availability and Contact|Question 4/4</h2></u>
+    <h3>
+    Surname: <span id="surname"></span><br><br>
+    Contact Number: <span id="contact-number"></span><br><br>
+    Email: <span id="availability-email"></span>
+    </h3>
+    <button id="availability-next-button">Submit</button>
+    </fieldset>
+  </div>
+
+  <!-- Progress Bar -->
+  <div id="progress-text"></div>
+  <div class="progress">
+    <div id="progress-bar"></div>
+  </div>
+
+  <div id="display-area"></div>
+  <script src="profile.js"></script>
+
+</body>
+</html>

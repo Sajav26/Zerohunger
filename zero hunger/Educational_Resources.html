@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Resources</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding-bottom: 90px;
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .resource-nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .resource-nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        .resource-nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            text-decoration: underline;
+        }
+        .page-editor-link {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            align-items: center;
+            grid-template-columns: auto;
+        }
+
+        .page-editor-link a {
+            padding: 10px;
+            background-color: turquoise;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .page-editor-link a:hover {
+            background-color: black;
+            color: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Logo and Navigation -->
+    <header>
+        <div class="logo">
+            <img src="zh2.png" alt="Website Logo">
+        </div>
+        <div class="website-name">
+            <h1>Zero Hunger</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Educational Resources</h1>
+
+        <!-- Educational Resources navigation -->
+        <nav class="resource-nav">
+            <ul>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#websites">Websites</a></li>
+                <li><a href="#magazines">Magazines</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#documentaries">Documentaries</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content Sections -->
+        <section id="books">
+            <h2>Books</h2>
+            
+                <p>"The End of Hunger: Renewed Hope for Feeding the World" by Jenny Zelenka</p>
+                <p>"World Hunger: Twelve Myths" by Frances Moore Lappé, Joseph Collins, and Peter Rosset</p>
+                <p>"The Last Hunger Season: A Year in an African Farm Community on the Brink of Change" by Roger Thurow</p>
+                <p>"Food Politics: How the Food Industry Influences Nutrition and Health" by Marion Nestle</p>
+                <p>"Hunger: A Modern History" by James Vernon</p>
+            
+        </section>
+
+        <section id="websites">
+            <h2>Websites</h2>
+            
+                <p>Food and Agriculture Organization (FAO) - <a href="#">www.fao.org</a></p>
+                <p>World Food Programme (WFP) - <a href="#">www.wfp.org</a></p>
+                <p>Action Against Hunger - <a href="#">www.actionagainsthunger.org</a></p>
+                <p>Bread for the World - <a href="#">www.bread.org</a></p>
+                <p>Global Hunger Index - <a href="#">www.globalhungerindex.org</a></p>
+            
+        </section>
+
+        <section id="magazines">
+            <h2>Magazines</h2>
+            
+                <p>Food Tank Magazine - <a href="#">www.foodtank.com</a></p>
+                <p>Hunger Notes -<a href="#">www.worldhunger.org/hunger-notes</a></p>
+                <p>World Food Program USA Magazine - <a href="#">www.wfpusa.org/magazine</a></p>
+                <p>The Food and Environment Reporting Network (FERN) - <a href="#">www.thefern.org</a></p>
+                <p>Gastronomica: The Journal of Food and Culture - <a href="#">www.gastronomica.org</a></p>
+            
+        </section>
+
+        <section id="articles">
+            <h2>Articles</h2>
+            
+                <p>"Ending Hunger: A Renewed Approach for a Sustainable World" - National Geographic</p>
+                <p>"Zero Hunger: Tackling the Root Causes of Famine" - The Guardian</p>
+                <p>"The Politics of Hunger" - Foreign Affairs</p>
+                <p>"Food Security: The Challenge of Feeding 9 Billion People" - Scientific American</p>
+                <p>"Solving World Hunger Means Solving World Poverty" - The Borgen Project</p>
+            
+        </section>
+
+        <section id="documentaries">
+            <h2>Documentaries</h2>
+            
+                <p>"A Place at the Table" - Directed by Kristi Jacobson and Lori Silverbush</p>
+                <p>"Food, Inc." - Directed by Robert Kenner</p>
+                <p>"Seeds of Freedom" - Directed by The Gaia Foundation and the African Biodiversity Network</p>
+                <p>"Wasted! The Story of Food Waste" - Directed by Anna Chai and Nari Kye</p>
+                <p>"Our Daily Bread" - Directed by Nikolaus Geyrhalter</p>   
+            
+        </section>
+
+        <!--Link to page editor-->
+        <div class="page-editor-link">
+            <h2>Page Editor</h2>
+                <a href="Page_Editor2.html" target="_blank">Page Editor</a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="myFooter" style="display: none;">
+        <p>&copy; 2024 Zero Hunger. All rights reserved.</p>
+    </footer>
+   
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('myFooter');
+            var scrollPosition = window.scrollY;
+            var windowHeight = window.innerHeight;
+            var documentHeight = Math.max(
+                document.documentElement.scrollHeight,
+                document.body.scrollHeight,
+                document.documentElement.clientHeight
+            );
+   
+            var distanceToBottom = documentHeight - (scrollPosition + windowHeight);
+   
+            var threshold = 100;
+   
+            if (distanceToBottom <= threshold) {
+                footer.style.display = 'block';
+            } else {
+                footer.style.display = 'none';
+            }
+        });
+   
+        
+        window.addEventListener('load', function() { 
+            window.scrollBy(0, 1);
+        });
+    </script>
+
+</body>
+</html>

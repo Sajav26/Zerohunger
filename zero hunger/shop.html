@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Shop</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="product-showcase.css">
+</head>
+<body class="showCart">
+  <header>
+    <div class="logo">
+      <img src="zh2.png" alt="Website Logo">
+    </div>
+    <div class="website-name">
+      <h1>Zero Hunger</h1>
+    </div> 
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="profile.html">User Profile</a></li>
+        <li><a href="feeback.html">Feedback</a></li>
+        <li><a href="sitemap.html">Sitemap</a></li>
+        <li><a href="team.html">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- The Header for product -->
+  <div class="container">
+    <header class="header">
+      <div class="title">PRODUCT LIST</div>
+      <div class="icon-cart">
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="30" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+        </svg>
+        <span id="cartItemCount">0</span>        
+      </div>
+    </header>
+
+    <!-- Show the products -->
+    <div class="listContainer">
+
+      <div class="product" id="product1">
+        <img src="product1.png" alt="">
+        <h2>VANILLA MILK</h2>
+        <div class="price">£3.50</div>
+        <button class="addCart" onclick="addToCart('product1')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product2">
+        <img src="product2.png" alt="">
+        <h2>CHOCOLATE MILK</h2>
+        <div class="price">£5.75</div>
+        <button class="addCart" onclick="addToCart('product2')">
+          Add to Cart 
+        </button>
+      </div>
+
+      <div class="product" id="product3">
+        <img src="product3.png" alt="">
+        <h2>FALUDA MILK</h2>
+        <div class="price">£6.20</div>
+        <button class="addCart" onclick="addToCart('product3')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product4">
+        <img src="product4.png" alt="">
+        <h2>FRESH FAT MILK</h2>
+        <div class="price">£1.22</div>
+        <button class="addCart" onclick="addToCart('product4')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product5">
+        <img src="product5.png" alt="">
+        <h2>ZERO FAT MILK</h2>
+        <div class="price">£3.00</div>
+        <button class="addCart" onclick="addToCart('product5')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product6">
+        <img src="product6.png" alt="">
+        <h2>CHEESE SLICES (12PCS)</h2>
+        <div class="price">£5.00</div>
+        <button class="addCart" onclick="addToCart('product6')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product7">
+        <img src="product7.png"alt="">
+        <h2>CHEESE (1PC)</h2>
+        <div class="price">£0.75</div>
+        <button class="addCart" onclick="addToCart('product7')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product8">
+        <img src="product8.png" alt="">
+        <h2>FRESH MIX FRUIT JUCIE</h2>
+        <div class="price">£1.20</div>
+        <button class="addCart" onclick="addToCart('product8')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product9">
+        <img src="product9.png" alt="">
+        <h2>ICE CREAM (VANILLA)</h2>
+        <div class="price">£2.50</div>
+        <button class="addCart" onclick="addToCart('product9')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product10">
+        <img src="product10.png" alt="">
+        <h2>ICE CREAM (CHOCOLATE)</h2>
+        <div class="price">£3.70</div>
+        <button class="addCart" onclick="addToCart('product10')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product11">
+        <img src="product11.png" alt="">
+        <h2>FRENCH BREAD</h2>
+        <div class="price">£1.30</div>
+        <button class="addCart" onclick="addToCart('product11')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product12">
+        <img src="product12.png" alt="">
+        <h2>WEAT BREAT (12SLICES)</h2>
+        <div class="price">£2.40</div>
+        <button class="addCart" onclick="addToCart('product12')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product13">
+        <img src="product13.png" alt="">
+        <h2>FRESH BUN</h2>
+        <div class="price">£0.60</div>
+        <button class="addCart" onclick="addToCart('product13')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product14">
+        <img src="product14.png" alt="">
+        <h2>CHOCOLATE DOUGNET</h2>
+        <div class="price">£1.80</div>
+        <button class="addCart" onclick="addToCart('product14')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product15">
+        <img src="product15.png" alt="">
+        <h2>CRACKER BISCUITS</h2>
+        <div class="price">£2.95</div>
+        <button class="addCart" onclick="addToCart('product15')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product16">
+        <img src="product16.png" alt="">
+        <h2>SOUP PACKET</h2>
+        <div class="price">£0.40</div>
+        <button class="addCart" onclick="addToCart('product16')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product17">
+        <img src="product17.png" alt="">
+        <h2>LUNCH PACKET</h2>
+        <div class="price">£2.45</div>
+        <button class="addCart" onclick="addToCart('product17')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product18">
+        <img src="product18.png" alt="">
+        <h2>OATS BREAKFAST PACKET</h2>
+        <div class="price">£2.90</div>
+        <button class="addCart" onclick="addToCart('product18')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product19">
+        <img src="product19.png" alt="">
+        <h2>DINNER FOOD PACK</h2>
+        <div class="price">£4.25</div>
+        <button class="addCart" onclick="addToCart('product19')">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="product" id="product20">
+        <img src="product20.png" alt="">
+        <h2>ICE COFFEE</h2>
+        <div class="price">£4.00</div>
+        <button class="addCart" onclick="addToCart('product20')">
+          Add to Cart
+        </button>
+      </div>
+
+    <div class="cart-tab">
+      <h1>SHOPPING CART</h1>
+      <div class="list-cart">
+        
+      </div>
+      <div class="total-amount">Total: <span id="totalAmount">£0.00</span></div>
+      <button class="clearCart" onclick="clearCart()">CLEAR CART</button>      
+      <div class="button">
+        <button class="close">CLOSE</button>
+        <button class="checkOut" onclick="checkout()">CHECK OUT</button> 
+      </div>
+    </div>
+  </div>
+<script src="product-showcase.js"></script>
+</script>
+</body>
+</html>

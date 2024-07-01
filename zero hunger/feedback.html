@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding-bottom: 100px;
+            margin: 0;
+        }
+
+
+        .container {
+            margin-top: 50px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        
+        input[type="radio"] {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .rating-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .rating-button {
+            background-color: #ccc;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .rating-button:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="button"] {
+            padding: 10px 20px;
+            background-color: darkcyan;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .radio-buttons input[type="radio"],
+        .radio-buttons label {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 5px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .page-editor-link {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            align-items: center;
+            grid-template-columns: auto;
+        }
+
+        .page-editor-link a {
+            padding: 10px;
+            background-color: turquoise;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .page-editor-link a:hover {
+            background-color: black;
+            color: turquoise;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Header with Logo and Navigation -->
+    <header>
+        <div class="logo">
+            <img src="zh2.png" alt="Website Logo">
+        </div>
+        <div class="website-name">
+            <h1>Zero Hunger</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+                <li><a href="feedback.html" class="active">Feedback</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+                <li><a href="team.html">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--All items within the feedabck form-->
+    <div class="container">
+        <h2>Feedback Form</h2>
+        <form id="feedbackForm" action="process_form.php" method="post" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="firstTimeVisitor">Is this your first time visiting?</label>
+            <div class="radio-buttons">
+                <input type="radio" id="firstTimeYes" name="firstTimeVisitor" value="Yes">
+                <label for="firstTimeYes">Yes</label>
+                <input type="radio" id="firstTimeVisitorNo" name="firstTimeVisitor" value="No">
+                <label for="firstTimeNo">No</label>
+            </div>
+
+            <label for="easyNavigation">Was this website informative and easy to navigate through?</label>
+            <div class="radio-buttons">
+                <input type="radio" id="easyYes" name="easyNavigation" value="Yes">
+                <label for="easyYes">Yes</label>
+                <input type="radio" id="easyNo" name="easyNavigation" value="No">
+                <label for="easyNo">No</label>
+            </div>
+
+
+            <label for="comments">If "No", suggest any improvement for the future:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+
+            <label for="satisfaction">Satisfaction Rating (1-10):</label>
+            <div class="rating-container">
+                <button type="button" class="rating-button" onclick="setRating(1)">1</button>
+                <button type="button" class="rating-button" onclick="setRating(2)">2</button>
+                <button type="button" class="rating-button" onclick="setRating(3)">3</button>
+                <button type="button" class="rating-button" onclick="setRating(4)">4</button>
+                <button type="button" class="rating-button" onclick="setRating(5)">5</button>
+                <button type="button" class="rating-button" onclick="setRating(6)">6</button>
+                <button type="button" class="rating-button" onclick="setRating(7)">7</button>
+                <button type="button" class="rating-button" onclick="setRating(8)">8</button>
+                <button type="button" class="rating-button" onclick="setRating(9)">9</button>
+                <button type="button" class="rating-button" onclick="setRating(10)">10</button>
+            </div>
+            <input type="hidden" id="rating" name="rating"><br>
+
+            <label for="recommend">Would you recommend our services?</label>
+            <div class="radio-buttons">
+                <input type="radio" id="recommendYes" name="recommend" value="Yes">
+                <label for="recommendYes">Yes</label>
+                <input type="radio" id="recommendNo" name="recommend" value="No">
+                <label for="recommendNo">No</label>
+            </div>
+            
+            <label for="updates">Would you like updates about the website and any offers?</label>
+            <select id="updates" name="updates">
+                <option value="Yes">Yes, via email</option>
+                <option value="No">No thanks</option>
+            </select>
+
+            <label for="questionsRequests">Questions and Requests:</label><br>
+            <textarea id="questionsRequests" name="questionsRequests" rows="4" cols="50"></textarea><br>
+
+            <input type="submit" value="Submit">
+
+            <input type="button" value="Preview" onclick="showPreview()">
+                
+
+            <!--Preview-->
+            <div id="previewModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closePreviewModal()">&times;</span>
+                    <div id="previewContent"></div>
+                </div>
+            </div>
+
+            <!--Link to page editor-->
+            <div class="page-editor-link">
+                <h2 style="text-align: center;">Page Editor</h2>
+                    <a href="Page_Editor2.html" target="_blank">Page Editor</a>
+            </div>
+
+        </form>
+    </div>
+
+    <!--javascript for contents-->
+    <script>
+        function setRating(rating) {
+            document.getElementById('rating').value = rating;
+            var buttons = document.getElementsByClassName('rating-button');
+            for (var i = 0; i < buttons.length; i++) {
+                if (i + 1 === rating) {
+                    buttons[i].style.backgroundColor = '#007bff';
+                    buttons[i].style.color = '#fff';
+                } else {
+                    buttons[i].style.backgroundColor = '#ccc';
+                    buttons[i].style.color = '#000';
+                }
+            }
+        }
+
+        function validateForm() {
+
+            var rating = document.getElementById('rating').value;
+            if (!rating) {
+                alert("Please provide a satisfaction rating.");
+                return false;
+            }
+    
+            var confirmed = confirm("Are you sure you want to submit your feedback?");
+
+            if (confirmed) { 
+                var thanks = alert("Thank you for your feedback!");
+            }
+
+            return confirmed;
+        }
+
+        function showPreview() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var rating = document.getElementById('rating').value;
+
+            
+            if (name && email && rating) {
+                
+                var firstTimeVisitor = document.querySelector('input[name="firstTimeVisitor"]:checked');
+                var easyNavigation = document.querySelector('input[name="easyNavigation"]:checked');
+                var comments = document.getElementById('comments').value;
+                var recommend = document.querySelector('input[name="recommend"]:checked');
+                var updates = document.getElementById('updates').value;
+                var questionsRequests = document.getElementById('questionsRequests').value;
+
+                
+                var previewContent = `
+                <h2>Preview</h2>
+                    <p><b>Name:</b> ${name}</p>
+                    <p><b>Email:</b> ${email}</p>
+                    <p><b>Satisfaction Rating:</b> ${rating}</p>
+                `;
+
+             
+                if (firstTimeVisitor) {
+                    previewContent += `<p><b>First Time Visitor:</b> ${firstTimeVisitor.value}</p>`;
+                }
+                if (easyNavigation) {
+                    previewContent += `<p><b>Easy Navigation:</b> ${easyNavigation.value}</p>`;
+                }
+                if (comments) {
+                    previewContent += `<p><b>Comments:</b> ${comments}</p>`;
+                }
+                if (recommend) {
+                    previewContent += `<p><b>Recommend Service:</b> ${recommend.value}</p>`;
+                }
+                if (updates) {
+                    previewContent += `<p><b>Updates:</b> ${updates}</p>`;
+                }
+                if (questionsRequests) {
+                    previewContent += `<p><b>Questions/Requests:</b> ${questionsRequests}</p>`;
+                }
+
+                
+                var previewContentDiv = document.getElementById('previewContent');
+                previewContentDiv.innerHTML = previewContent;
+                var modal = document.getElementById('previewModal');
+                modal.style.display = 'block';
+            } else {
+                alert("Please fill in your name, email, and provide a satisfaction rating before previewing.");
+            }
+        }
+        function closePreviewModal() {
+            var modal = document.getElementById('previewModal');
+            modal.style.display = 'none';
+        }
+
+
+    </script>
+
+    <!-- Footer -->
+    <footer id="myFooter" style="display: none;">
+        <p>&copy; 2024 Zero Hunger. All rights reserved.</p>
+    </footer>
+   
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('myFooter');
+            var scrollPosition = window.scrollY;
+            var windowHeight = window.innerHeight;
+            var documentHeight = Math.max(
+                document.documentElement.scrollHeight,
+                document.body.scrollHeight,
+                document.documentElement.clientHeight
+            );
+   
+            var distanceToBottom = documentHeight - (scrollPosition + windowHeight);
+   
+            var threshold = 100;
+   
+            if (distanceToBottom <= threshold) {
+                footer.style.display = 'block';
+            } else {
+                footer.style.display = 'none';
+            }
+        });
+   
+        
+        window.addEventListener('load', function() { 
+            window.scrollBy(0, 1);
+        });
+    </script>
+    
+    
+</body>
+</html>
